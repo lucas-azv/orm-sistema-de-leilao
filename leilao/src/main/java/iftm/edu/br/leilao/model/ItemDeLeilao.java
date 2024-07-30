@@ -1,5 +1,8 @@
 package iftm.edu.br.leilao.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -16,4 +19,10 @@ public class ItemDeLeilao {
     private String nome;
     private Double valorMinimo;
     private boolean leilaoAberto;
+
+    @OneToOne
+    private Lance lanceVencedor;
+
+    @ManyToMany
+    private List<Lance> lancesRecebidos = new ArrayList<Lance>();
 }

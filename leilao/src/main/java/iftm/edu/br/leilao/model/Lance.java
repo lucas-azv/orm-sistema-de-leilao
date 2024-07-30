@@ -15,4 +15,5 @@ public class Lance {
     private Long id;
     private Double valor;
     private boolean leilaoAberto;
+
 }
