@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import iftm.edu.br.leilao.model.ItemDeLeilao;
 import iftm.edu.br.leilao.model.Lance;
-import iftm.edu.br.leilao.service.ItemdeLeilaoService;
+import iftm.edu.br.leilao.service.ItemDeLeilaoService;
 
 @RestController
 @RequestMapping("/itemdeleilao")
 public class ItemDeLeilaoController {
 
 	@Autowired
-	private ItemdeLeilaoService service;
+	private ItemDeLeilaoService service;
 
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable Long id) {
